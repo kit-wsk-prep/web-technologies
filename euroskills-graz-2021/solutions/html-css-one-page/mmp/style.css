@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    background: #000;
+}
+
+h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    z-index: -100;
+}
+
+.background video {
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background .darken {
+    width: 100vw;
+    height: 90vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container h1 {
+    color: #fff;
+    font-size: 72px;
+    line-height: 76px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.container h1 span {
+    color: #19c88c;
+    font-weight: 700;
+}
+
+.container .info {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.container .info .info-block {
+    width: 49%;
+    min-width: 49%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.container .info .info-block h2 {
+    font-size: 24px;
+    line-height: 26px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.container .info .info-block p {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.6);
+}
+
+.container .mvp {
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.container button {
+    background: transparent;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #19c88c;
+
+    transition: all 0.5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.container button .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.5s;
+    margin-left: 6px;
+}
+
+.container button:hover {
+    color: rgba(20, 200, 140, 0.5);
+}
+
+.container button:hover > .icon {
+    transform: rotate(-45deg);
+    margin-left: 12px;
+}
+
+.container .images {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 24px;
+}
+
+.container .images .image {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.block {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+    .background .darken {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .background .image {
+        background: url('./assets/images/concert/anthony-delanoix-hzgs56Ze49s-unsplash.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .background video {
+        display: none;
+    }
+    .container .images {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .container .info {
+        width: 80%;
+        max-width: 80%;
+        flex-direction: column;
+    }
+
+    .container .info .info-block {
+        width: 100%;
+        min-width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .container .images {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .container .info {
+        width: 100%;
+    }
+
+    .container .info .info-block {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .container .images {
+        width: 100%;
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+header nav ul li a:hover {
+    color: rgba(20, 200, 140, 0.5);
+}
